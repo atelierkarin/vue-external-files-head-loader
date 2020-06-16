@@ -1,28 +1,43 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
+    <button type="button" class="btn btn-success">Success</button>
+    <button type="button" class="btn btn-info">Info</button>
+    <button type="button" class="btn btn-warning">Warning</button>
+    <button type="button" class="btn btn-danger">Danger</button>
+    <button type="button" class="btn btn-link">Link</button>
+    <button type="button" class="btn">
+      <code>btn</code> only
+    </button>
+    <button type="button" class="btn active">
+      <code>.active</code>
+    </button>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
+  name: "App",
+  created() {
+    const resources = [
+      {
+        host: "https://cdnjs.cloudflare.com/ajax/libs/",
+        jsLibrary: [
+          "jquery/3.5.1/jquery.js",
+          "tether/1.4.7/js/tether.js",
+          "bootstrap-material-design/4.0.2/bootstrap-material-design.iife.js"
+        ],
+        cssLibrary: [
+          "bootstrap-material-design/4.0.2/bootstrap-material-design.css",
+          "tether/1.4.7/css/tether.min.css"
+        ]
+      }
+    ];
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+    this.$head.load(resources).then(() => {
+      this.isResourceLoaded = true;
+    });
+  }
+};
+</script>
