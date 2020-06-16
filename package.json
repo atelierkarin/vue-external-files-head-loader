@@ -1,12 +1,12 @@
 {
-  "name": "vue-external-files-head-loader",
-  "version": "0.1.0",
+  "name": "vue-ext-files-head-loader",
+  "version": "0.1.1",
   "author": "KarinP",
   "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build:npm": "vue-cli-service build --target lib --name vue-external-files-head-loader ./src/plugins/HeadLoader.js"
+    "build:npm": "vue-cli-service build --target lib --name vue-ext-files-head-loader ./src/plugins/HeadLoader.js"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -20,6 +20,11 @@
   "files": [
     "dist"
   ],
-  "main": "dist/vue-external-files-head-loader.umd.js",
-  "unpkg": "dist/vue-external-files-head-loader.umd.min.js"
+  "main": "dist/vue-ext-files-head-loader.umd.js",
+  "unpkg": "dist/vue-ext-files-head-loader.umd.min.js",
+  "homepage": "https://github.com/atelierkarin/vue-external-files-head-loader",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atelierkarin/vue-external-files-head-loader"
+  }
 }
