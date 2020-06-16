@@ -7,7 +7,7 @@ Demo: [Demo](https://codesandbox.io/s/demo-vue-external-files-head-loader-x1tdh?
 ## Install
 
 ```
-npm install --save vue-external-files-head-loader
+npm install --save vue-ext-files-head-loader
 ```
 
 ### Include the plugin in main.js
@@ -15,7 +15,7 @@ npm install --save vue-external-files-head-loader
 Add the following in `main.js`
 
 ```javascript
-import HeadLoader from "vue-external-files-head-loader";
+import HeadLoader from "vue-ext-files-head-loader";
 
 Vue.use(HeadLoader);
 ```
